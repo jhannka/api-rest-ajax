@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>API REST FULL</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        .loading {
+            display: none;
+        }
+
+        .new {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid border-dark mt-4">
+        <div class="container text-center">
+            <h1 class="display-4">API REST FULL</h1>
+        </div>
+    </div>
+    <div class="datos mb-4">
+        <button class="btn btn-outline-dark btn-lg btn-block loading" type="button" disabled>
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            Cargando...
+        </button>
+    </div>
+    <div class="new">
+        <div class="card border-danger mb-4">
+            <div class="card-body">
+                <form method="post" action="https://jsonplaceholder.typicode.com/posts" id="formularios">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Titulo</label>
+                        <input name="titulo" type="text" class="form-control" id="formGroupExampleInput"
+                               placeholder="Titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Descripcion</label>
+                        <textarea name="body" id="formGroupExampleInput2" class="form-control"
+                                  placeholder="Descripcion" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-outline-success btn-lg btn-block">Enviar Datos</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="estado"></div>
+    <div class="row mb-4">
+        <div class="col-6">
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" name="button" id="btn-get">BOTON GET
+                ALL
+            </button>
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" name="button" id="btn-get2">BOTON
+                GET
+            </button>
+            <button type="button" class="btn btn-outline-danger btn-lg btn-block" name="button" id="btn-delete">BOTON
+                DELETE INFO
+            </button>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-outline-info btn-lg btn-block" name="button" id="btn-post">NEW POST
+            </button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block" name="button" id="btn-patch">PATCH
+                INFO
+            </button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block" name="button" id="btn-put">PUT
+                INFO
+            </button>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/api-rest.js"></script>
+</body>
+</html>
